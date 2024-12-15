@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casestudy_group1_cs2b.TicketsController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="86.0" prefWidth="188.0" text="Title" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#handleActionButton" prefHeight="90.0" prefWidth="300.0" text="Home">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="90.0" prefWidth="300.0" text="Rides">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="90.0" prefWidth="300.0" text="Promos">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="ticketsBtn" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="90.0" prefWidth="300.0" text="Tickets">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="aboutBtn" layoutX="10.0" layoutY="380.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="90.0" prefWidth="300.0" text="About">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="1620.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="44.0" prefWidth="97.0" text="Login">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="signupBtn" layoutX="62.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="44.0" prefWidth="97.0" text="Sign up">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefWidth="200.0">
+               <children>
+                  <VBox fx:id="MainContent" prefHeight="990.0" prefWidth="1300.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="300.0">
+                           <children>
+                              <Label text="WELCOME TO HERITAGE HEIGHTS">
+                                 <font>
+                                    <Font name="Arial" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="countdownLabel" layoutX="729.0" layoutY="52.0" text="You only have X minutes left">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="368.0" prefWidth="527.0" spacing="16.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Buyer Details">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="FIRST NAME:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="firstnameField" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="240.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="LAST NAME:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="lastnameField" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="260.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="AGE:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="ageField" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="281.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="125.0">
+                                             <children>
+                                                <Label text="EMAIL ADDRESS:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="emailField" prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="301.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="CONTACT NO:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="contactnoField" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="368.0" prefWidth="527.0" spacing="16.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Order Information">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="ORDER NAME:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="125.0">
+                                             <children>
+                                                <TextField fx:id="ordernameTextfield" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="240.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="DATE/TIME:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <DatePicker fx:id="dateField" prefWidth="125.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="260.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="LOCATION:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="125.0">
+                                             <children>
+                                                <TextField editable="false" text="Bataan" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="281.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="125.0">
+                                             <children>
+                                                <Label text="QUANTITY:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="125.0">
+                                             <children>
+                                                <TextField fx:id="quantityField" prefWidth="200.0" text="1" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="368.0" prefWidth="527.0" spacing="16.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Payment Details">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="TOTAL AMOUNT">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="100.0">
+                                             <children>
+                                                <TextField fx:id="amountField" editable="false" text="15" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="240.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="Mode of Payment:">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <ComboBox fx:id="mopComboBox" prefWidth="125.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="260.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="100.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="290.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefWidth="125.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#handleActionButton" prefHeight="45.0" prefWidth="125.0" text="Cancel" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="211.0" layoutY="10.0" prefWidth="125.0">
+                                             <children>
+                                                <Button fx:id="submitButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#handleSubmitButton" prefHeight="45.0" prefWidth="125.0" text="Submit" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="368.0" prefWidth="527.0" spacing="16.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Customize your order">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                                             <children>
+                                                <Label text="CHOOSE TITLE">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="125.0">
+                                             <children>
+                                                <ComboBox fx:id="rideComboBox" prefWidth="150.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="281.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="125.0">
+                                             <children>
+                                                <Label text="QUANTITY">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="125.0">
+                                             <children>
+                                                <TextField fx:id="newQty" prefWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefWidth="125.0" />
+                                          <VBox alignment="CENTER" layoutX="211.0" layoutY="10.0" prefWidth="125.0">
+                                             <children>
+                                                <Button fx:id="addOrderBtn" mnemonicParsing="false" onAction="#handleAddOrderButton" prefHeight="45.0" prefWidth="125.0" text="Add " />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="990.0" prefWidth="634.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="67.0" prefWidth="122.0" text="Order Lists">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="OrderVBox" prefWidth="100.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
