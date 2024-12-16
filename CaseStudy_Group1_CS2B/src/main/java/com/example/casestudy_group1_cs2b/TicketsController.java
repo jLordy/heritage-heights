@@ -124,7 +124,7 @@ public class TicketsController implements DataReceiver {
     }
     // Method to start the timer
     private void startTimer() {
-        int totalTime = 60; // Total countdown time in seconds
+        int totalTime = 180; // Total countdown time in seconds
 
         timer = new Timer();
 
@@ -277,7 +277,7 @@ public class TicketsController implements DataReceiver {
     private void showSuccessAlert() {
         Alert successAlert = new Alert(AlertType.INFORMATION);
         successAlert.setTitle("Ticket Submitted Successfully");
-        successAlert.setHeaderText("Ticket Details");
+        successAlert.setHeaderText("");
         successAlert.setContentText("Thank you for purchasing the Heritage Heights pass. See you there!");
         successAlert.showAndWait();
     }

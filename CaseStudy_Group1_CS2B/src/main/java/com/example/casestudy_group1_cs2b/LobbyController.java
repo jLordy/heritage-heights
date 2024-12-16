@@ -79,11 +79,11 @@ public class LobbyController implements DataReceiver{
     public int generateRandomLine() {
         // Add the "New Person" only if not already added
         if (!queue.newPersonAdded) {
-            queue.enqueueRandom("User");
+            queue.enqueueRandom("New Person");
         }
 
         // Get the position of the "New Person"
-        return queue.getPosition("User");
+        return queue.getPosition("New Person");
     }
 
     // Update the line label with the current position of the "New Person"
@@ -97,7 +97,7 @@ public class LobbyController implements DataReceiver{
     // Method to automatically dequeue and update the label every 10 seconds
     public void startAutoQueueUpdate() {
         timeline = new Timeline(
-                new KeyFrame(Duration.seconds(1), _ -> {
+                new KeyFrame(Duration.seconds(5), _ -> {
                     // Dequeue a person
                     String dequeued = queue.dequeue();
                     System.out.println("\nDequeued: " + dequeued);

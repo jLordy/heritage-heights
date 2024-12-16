@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casestudy_group1_cs2b.LoginController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/22-ea+11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casestudy_group1_cs2b.LoginController">
    <children>
       <VBox alignment="CENTER" maxWidth="1600.0" minWidth="1600.0" prefHeight="576.0" prefWidth="1600.0" spacing="15.0">
          <children>

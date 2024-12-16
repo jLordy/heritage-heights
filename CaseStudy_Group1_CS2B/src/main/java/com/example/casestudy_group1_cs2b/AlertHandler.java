@@ -18,17 +18,6 @@ public class AlertHandler {
         alert.showAndWait();
     }
 
-    public static void showWarningAlert() {
-        // Create an Alert of type WARNING
-        Alert alert = new Alert(AlertType.WARNING);
-        alert.setTitle("Warning Alert");
-        alert.setHeaderText("Warning Header");
-        alert.setContentText("This is a warning alert!");
-
-        // Show the alert and wait for the user to close it
-        alert.showAndWait();
-    }
-
     public static void showErrorAlert(String header, String content) {
         // Create an Alert of type ERROR
         Alert alert = new Alert(AlertType.ERROR);
